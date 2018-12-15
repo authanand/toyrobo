@@ -1,26 +1,26 @@
 # Toy Robot Simulator
 
-Installation 
+Installation: (node modules not included)
 -----------
-git clone https://github.com/authanand/toyrobo.git
+    git clone https://github.com/authanand/toyrobo.git
+
 
 Run unit test using JEST
 -----------
-npm test
+    npm test
 
 Run program with input file
 -----------
-./index.js ./input/test1.txt
-./index.js ./input/test2.txt
-./index.js ./input/test3.txt
-./index.js ./input/test4.txt
-./index.js ./input/test5.txt
-./index.js ./input/test6.txt
+    ./index.js ./input/test1.txt
 
-Run Build package
+
+Run Build package using grunt
 -----------
-grunt build
+    grunt build
 
+Dependency
+-----------
+chalk, byline, grunt, jest
 
 Example Input and Output
 ------------------------
