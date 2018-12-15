@@ -21,5 +21,12 @@
   "bugs": {
     "url": "https://github.com/authanand/toyrobo/issues"
   },
-  "homepage": "https://github.com/authanand/toyrobo#readme"
+  "homepage": "https://github.com/authanand/toyrobo#readme",
+  "devDependencies": {
+    "byline": "^5.0.0",
+    "chalk": "^2.4.1",
+    "grunt": "^1.0.3",
+    "grunt-contrib-jshint": "^2.0.0",
+    "grunt-contrib-uglify": "^4.0.0"
+  }
 }
