@@ -8,7 +8,7 @@ module.exports = function(grunt) {
           banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
         },
         build: {
-          src: 'src/<%= pkg.name %>.js',
+          src: ['index.js', 'src/<%= pkg.name %>.js'],
           dest: 'build/<%= pkg.name %>.min.js'
         }
       }
@@ -18,6 +18,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
   
     // Default task(s).
-    grunt.registerTask('default', ['uglify']);
+    grunt.registerTask('build', ['uglify']);
   
   };

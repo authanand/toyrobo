@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 var fs = require('fs');
-ToyRobo = require('./src/robo.js');
+ToyRobo = require('./src/toyrobo.js');
 chalk = require('chalk');
 byline = require('byline');
 
-let inputArray = [];
+var inputArray = [];
 
 function bootsrap(){
   var file;
