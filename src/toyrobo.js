@@ -58,7 +58,7 @@ ToyRobo.prototype.placeRobot = function(arr, index){
         this.placed = true;
         this.face   = arr[2].toLowerCase();
 
-        console.log('Robot placed: '+ this.x + ', ' + this.y + ', ' + this.face.toUpperCase() );
+        console.log('Robot placed: '+ this.x + ',' + this.y + ',' + this.face.toUpperCase() );
       }
     }
 }
@@ -70,7 +70,7 @@ ToyRobo.prototype.report = function (){
         return;
     }
     console.log( chalk.yellow('##########################################################'));
-    console.log( chalk.green('Report: ' + this.x + ', ' + this.y + ', ' + this.face.toUpperCase() ));
+    console.log( chalk.green('Report: ' + this.x + ',' + this.y + ',' + this.face.toUpperCase() ));
     console.log( chalk.yellow('##########################################################'));
 }
 
