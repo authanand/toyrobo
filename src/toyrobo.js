@@ -39,6 +39,7 @@ ToyRobo.prototype.loadData = function(data) {
         }else if(data[i].toLowerCase()=='move'){
             this.move();
         }else{
+         
             this.turn(data[i].toLowerCase());
         }
     }
@@ -47,19 +48,19 @@ ToyRobo.prototype.loadData = function(data) {
 ToyRobo.prototype.placeRobot = function(arr, index){    
     arr = arr.map(function(d) { return d.replace('PLACE ', ''); });
     arr = arr[index].split(',');
-    
-    //console.log(this.faceMap[arr[2].toLowerCase()]);
-    if(typeof this.faceMap[arr[2].toLowerCase()]=='undefined') return;
-   
+
+    if(typeof this.faceMap[arr[2].toLowerCase()]!='undefined') 
+    {
     if(parseInt(arr[0])>=0 && parseInt(arr[0]) <=4 && parseInt(arr[1])>=0 && parseInt(arr[1]) <=4)
-     {
+      {
         this.x      = parseInt(arr[0]);
         this.y      = parseInt(arr[1]);
         this.placed = true;
         this.face   = arr[2].toLowerCase();
 
         console.log('Robot placed: '+ this.x + ', ' + this.y + ', ' + this.face.toUpperCase() );
-     }
+      }
+    }
 }
 
 ToyRobo.prototype.report = function (){
@@ -74,28 +75,28 @@ ToyRobo.prototype.report = function (){
 }
 
 ToyRobo.prototype.move = function (){
-    switch (this.face) {
-        case 'north':
-          if(this.y+1 <= 4)
-              this.y++;
-          break;
-        case 'east':
-          if(this.x+1 <= 4)
-             this.x++; 
-          break;
-        case 'south':
-          if(this.y-1 >= 0)
-             this.y--;
-          break;
-        case 'west':
-          if(this.x-1 >= 0)
-          this.x--;
-            break;
-        default:
-          break;
-      }
-
-   console.log('Robot moved: ' + this.x + ', ' + this.y); 
+    if(this.placed){
+        switch (this.face) {
+            case 'north':
+              if(this.y+1 <= 4)
+                  this.y++;
+              break;
+            case 'east':
+              if(this.x+1 <= 4)
+                 this.x++; 
+              break;
+            case 'south':
+              if(this.y-1 >= 0)
+                 this.y--;
+              break;
+            case 'west':
+              if(this.x-1 >= 0)
+              this.x--;
+                break;
+            default:
+              break;
+          }
+        }
 }
 
 ToyRobo.prototype.turn = function(direction) {
