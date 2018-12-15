@@ -1,0 +1,25 @@
+{
+  "name": "toyrobo",
+  "version": "1.0.0",
+  "description": "Toy robo game",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/authanand/toyrobo.git"
+  },
+  "keywords": [
+    "Javascript",
+    "based",
+    "ToyRobo",
+    "simulator"
+  ],
+  "author": "anand",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/authanand/toyrobo/issues"
+  },
+  "homepage": "https://github.com/authanand/toyrobo#readme"
+}
